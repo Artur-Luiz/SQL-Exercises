@@ -1,6 +1,6 @@
 /*
 
--- Exercício 1
+Exercício 1
 
 a. Faça os scripts para a criação das tabelas, sem as constraints;
 b. Faça os scripts para a criação das chaves primárias das tabelas criadas;
@@ -18,8 +18,6 @@ j. Apague as inserções feitas nos exercícios i e j;
 k. Faça o script para excluir todas as tabelas criadas no exercício a.
 
 */
-
-USE EXERCICIO;
 
 --a. Faça os scripts para a criação das tabelas, sem as constraints;
 CREATE TABLE PRODUCTREQUEST 
