@@ -1,24 +1,3 @@
-/*
-
-Exercício 1
-
-a. Faça os scripts para a criação das tabelas, sem as constraints;
-b. Faça os scripts para a criação das chaves primárias das tabelas criadas;
-c. Faça os scripts para a criação das chaves secundárias das tabelas criadas;
-d. Crie um índice para a chave estrangeira da tabela de produtos;
-e. Crie um índice para a chave estrangeira da tabela de pedidos;
-f. Adicione o campo endereço na tabela de fornecedores;
-g. Faça a inserção de um novo cliente com os seguintes dados: Nome = Fabiano,
-Telefone = 99879375 e Endereço = Rua Tijucas, 110, Centro, Joinville – S.C;
-h. Faça a inserção de um novo pedido com os seguintes dados: Data do Pedido =
-31/01/2008, Cliente = Fabiano (exercício i), Data de Entrega = 05/02/2008 e
-Total = 54,00;
-i. Atualize o telefone do cliente Fabiano (exercício i) para 99012567;
-j. Apague as inserções feitas nos exercícios i e j;
-k. Faça o script para excluir todas as tabelas criadas no exercício a.
-
-*/
-
 --a. Faça os scripts para a criação das tabelas, sem as constraints;
 CREATE TABLE PRODUCTREQUEST 
 (
@@ -84,12 +63,10 @@ CREATE INDEX IDX_REQUEST_CDCUSTOMER ON REQUEST(CDCUSTOMER);
 -- f. Adicione o campo endereço na tabela de fornecedores;
 ALTER TABLE SUPPLIER ADD DSADRESS VARCHAR(50);
 
--- g. Faça a inserção de um novo cliente com os seguintes dados: Nome = Fabiano,
--- Telefone = 99879375 e Endereço = Rua Tijucas, 110, Centro, Joinville – S.C;
+-- g. Faça a inserção de um novo cliente com os seguintes dados: Nome = Fabiano, Telefone = 99879375 e Endereço = Rua Tijucas, 110, Centro, Joinville – S.C;
 INSERT INTO CUSTOMER (CDCUSTOMER, NMCUSTOMER, NRFONE, DSADRESS) VALUES (1, 'Fabiano', '99879375', 'Rua Tijucas, 110, Centro, Joinville – S.C');
 
--- h. Faça a inserção de um novo pedido com os seguintes dados: Data do Pedido =
--- 31/01/2008, Cliente = Fabiano (exercício i), Data de Entrega = 05/02/2008 e Total = 54,00;
+-- h. Faça a inserção de um novo pedido com os seguintes dados: Data do Pedido = 31/01/2008, Cliente = Fabiano (exercício i), Data de Entrega = 05/02/2008 e Total = 54,00;
 INSERT INTO REQUEST (CDREQUEST, DTREQUEST, CDCUSTOMER, DTDELIVER, VLTOTAL) VALUES (1, '2008-01-31', 1, '2008-02-05', 54.00);
 
 -- i. Atualize o telefone do cliente Fabiano (exercício i) para 99012567;
